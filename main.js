@@ -26,10 +26,12 @@ client.on('message', message =>{
     const args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
 
-    if(command === 'aboutme'){
-        client.commands.get('aboutme').execute(message, args);
+    if(command === 'aboutnyami'){
+        client.commands.get('aboutnyami').execute(message, args);
     } else if (command == 'email'){
         client.commands.get('email').execute(message, args);
+    } else if (command == 'social'){
+        client.commands.get('social').execute(message, args);
     }
 });
 
