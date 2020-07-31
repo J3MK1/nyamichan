@@ -18,6 +18,12 @@ for(const file of commandFiles){
  
     client.commands.set(command.name, command);
 }
+
+var numbers = new Array(10)
+for (var i = 0; i < numbers.length; i++) {
+  numbers[i] = randomIntInc(1, 10)
+  return numbers;
+}
  
 client.on('guildMemberAdd', member =>{
 
