@@ -48,6 +48,8 @@ client.on('message', message =>{
         client.commands.get('commission').execute(message, args);
     }else if (command == 'question'){
         client.commands.get('question').execute(message, args);
+    }else if (command == 'patreon'){
+        client.commands.get('patreon').execute(message, args);
     }
 });
 
