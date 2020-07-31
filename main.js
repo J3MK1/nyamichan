@@ -25,7 +25,7 @@ client.on('guildMemberAdd', member =>{
 
     const channel = member.guild.channels.cache.get(channelId)
 
-    channel.send(`Heey, welcome to our server ${member}, say hello to everyone in ${member.guild.channels.cache.get(discussionId).toString()}! I hope you have a lot of fun here! :D`)
+    channel.send(`Heey, welcome to our server ${member}, say hello to everyone in ${member.guild.channels.cache.get(discussionId).toString()}! I hope you have a lot of fun here! Yayy! :D`)
 });
  
 client.once('ready', () => {
