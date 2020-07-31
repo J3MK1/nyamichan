@@ -20,7 +20,7 @@ client.on('guildMemberAdd', member =>{
     const channel = member.guild.channels.cache.find(channel => channel.name === 'welcome')
     if(!channel) return;
 
-    channel.send(`Heey, welcome to our server ${member}, say hello to everyone in #discussion channel! I hope you have a lot of fun here! :D`)
+    channel.send(`Heey, welcome to our server ${member}, say hello to everyone in ${member.guild.channels.cache.find('discussion')}! I hope you have a lot of fun here! :D`)
 });
  
 client.once('ready', () => {
