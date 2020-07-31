@@ -6,9 +6,6 @@ const prefix = '!';
 
 const fs = require('fs');
 
-var logger = require('winston');
-var auth = require('./auth.json');
-
 const channelId = '738567304065056859' // welcome Id
 
 const discussionId = '716316265823600730' // discussion Id
@@ -31,51 +28,21 @@ client.on('guildMemberAdd', member =>{
     channel.send(`Heey, welcome to our server ${member}, say hello to everyone in ${member.guild.channels.cache.get(discussionId).toString()}! I hope you have a lot of fun here! Yayy! :D`)
 });
 
-// Configure the array used for random replies
-let replies = ["reply 1", "reply 2", "reply 3"];
+client.on('message' , message =>{
+    if (message.content == 'roll') 
+    {
+        var roll =(Math.floor(Math.random()*200)+1);
+        if (roll == 1)
+        {
+            message.reply('Wowza!');
+        }
+        else 
+        {
+            message.reply('lol!');
+        }
+    }
+}); 
 
-// Configure the randomizer that will pick a random integer from 0 to the length of the array; used for array index
-let random = Math.floor(Math.random() * replies.length);
-
-// Configure logger settings
-logger.remove(logger.transports.Console);
-logger.add(new logger.transports.Console, {
-    colorize: true
-});
-logger.level = 'debug';
-
-// Initialize Discord Bot
-var bot = new Discord.Client({
-    token: auth.token,
-    autorun: true
-});
-
-bot.on('ready', function (evt) {
-    logger.info('Connected');
-    logger.info('Logged in as: ');
-    logger.info(bot.username + ' - ('+ bot.id + ')');
-});
-bot.on('message', function (user, userID, channelID, message, evt) {
-    // Our bot needs to know if it will execute a command
-    // It will listen for messages that will start with /
-    if (message.substring(0, 1) == '/') {
-        var args = message.substring(1).split(' ');
-        var cmd = args[0];
-
-        args = args.splice(1);
-        switch(cmd) {
-            // /Hi
-            case 'test1':
-                bot.sendMessage({
-                    to: channelID,
-                    message: replies[random]
-                });
-        break;
-        // Just add any case commands if you want to..
-         }
-     }
-});
- 
 client.once('ready', () => {
     console.log('Nyami-chan BOT is online!');
 });
