@@ -5,6 +5,10 @@ const client = new Discord.Client();
 const prefix = '!';
 
 const fs = require('fs');
+
+const channelId = '738567304065056859' // welcome Id
+
+const discussionId = '716316265823600730' // discussion Id
  
 client.commands = new Discord.Collection();
  
@@ -17,10 +21,11 @@ for(const file of commandFiles){
  
 client.on('guildMemberAdd', member =>{
 
-    const channel = member.guild.channels.cache.find(channel => channel.name === 'welcome')
-    if(!channel) return;
+    console.log(member)
 
-    channel.send(`Heey, welcome to our server ${member}, say hello to everyone in ${member.guild.channels.cache.find('discussion')}! I hope you have a lot of fun here! :D`)
+    const channel = member.guild.channels.cache.get(channelId)
+
+    channel.send(`Heey, welcome to our server ${member}, say hello to everyone in ${member.guild.channels.cache.get(discussionId).toString()}! I hope you have a lot of fun here! :D`)
 });
  
 client.once('ready', () => {
