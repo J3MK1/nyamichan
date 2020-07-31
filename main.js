@@ -15,9 +15,9 @@ for(const file of commandFiles){
     client.commands.set(command.name, command);
 }
  
-client.on('newMemberaAdd', member =>{
+client.on('guildMemberAdd', member =>{
 
-    const channel = member.guild.channels.find(channel => channel.name === "welcome");
+    const channel = member.guild.channels.cache.find(channel => channel.name === 'welcome')
     if(!channel) return;
 
     channel.send(`Heey, welcome to our server ${member}, say hello to everyone in #general channel! I hope you have a lot of fun here! :D`)
