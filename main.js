@@ -44,6 +44,10 @@ client.on('message', message =>{
         client.commands.get('email').execute(message, args);
     } else if (command == 'social'){
         client.commands.get('social').execute(message, args);
+    }else if (command == 'commissions'){
+        client.commands.get('commissions').execute(message, args);
+    }else if (command == 'question'){
+        client.commands.get('question').execute(message, args);
     }
 });
 
