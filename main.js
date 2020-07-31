@@ -31,7 +31,7 @@ client.on('guildMemberAdd', member =>{
 client.on('message' , message =>{
     if (message.content == 'roll') 
     {
-        var roll =(Math.floor(Math.random()*200)+1);
+        var roll =(Math.floor(Math.random())+1);
         if (roll == 1)
         {
             message.reply('Wowza!');
