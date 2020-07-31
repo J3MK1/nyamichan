@@ -36,9 +36,35 @@ client.on('message' , message =>{
         {
             message.reply('Wowza!');
         }
-        else 
+        else if (roll == 2)
         {
-            message.reply('lol!');
+            message.reply('lol1!', roll);
+        }
+        else if (roll == 3)
+        {
+            message.reply('lol2!');
+        }        else if (roll == 4)
+        {
+            message.reply('lol3!');
+        }        else if (roll == 5)
+        {
+            message.reply('lol4!');
+        }        else if (roll == 6)
+        {
+            message.reply('lol!5');
+        }        else if (roll == 7)
+        {
+            message.reply('lol!6');
+        }        else if (roll == 8)
+        {
+            message.reply('lol!7');
+        }        else if (roll == 9)
+        {
+            message.reply('lol!8');
+        }
+        else
+        {
+            message.reply('lol!9');
         }
     }
 }); 
