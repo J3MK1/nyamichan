@@ -29,11 +29,9 @@ client.on('guildMemberAdd', member =>{
 });
 
 client.on('message' , message =>{
-    
     if (message.content == 'roll') 
     {
-        function between(min,max)
-        var roll =(Math.floor(Math.random())* (max - min + 1) + min);
+        var roll =(Math.floor(Math.random()*10));
         if (roll == 1)
         {
             message.reply('Wowza!');
@@ -70,10 +68,6 @@ client.on('message' , message =>{
         }
     }
 }); 
-
-console.log(
-    between(0,9)
-)
 
 client.once('ready', () => {
     console.log('Nyami-chan BOT is online!');
