@@ -38,19 +38,19 @@ client.on('message' , message =>{
         var roll =(Math.floor(Math.random()*5));
         if (roll == 1)
         {
-            message.reply('I once knew a joke but *hmpf~ now how did it go?');
+            message.reply('I once knew a joke but *hmpf~ now how did it go? (˃ᆺ˂)');
         }
         else if (roll == 2)
         {
-            message.reply('my master didnt tell me that I would have to tell jokes ... I am good at messing up!!');
+            message.reply('my master didnt tell me that I would have to tell jokes ... I am good at messing up!! (☆▽☆)');
         }
         else if (roll == 3)
         {
-            message.reply('once a woman arrived with a very angry face with brown hair and cat ears and... w-what are you doing here Kinatsu?!');
+            message.reply('once a woman arrived with a very angry face with brown hair and cat ears and... w-what are you doing here Kinatsu?! 	(⊙_⊙)');
         }        
         else
         {
-            message.reply('Kitty, do you have a joke for him? *meoow~ Oh. Well, its not the time Kitty! ~~Lets just keep that to ourselves.~~ :x');
+            message.reply('Kitty, do you have a joke for him? *meoow~ Oh. Well, its not the time Kitty! ~~Lets just keep that to ourselves.~~ (￢‿￢ )');
         }        
     }
 }); 
@@ -85,7 +85,7 @@ client.on('message', message =>{
 client.on('message', message => {
 
     if(message.content == '!listener'){
-        message.reply('now you will know everything my master is doing! :D');
+        message.reply('now you will know everything my master is doing! (ﾉ◕ヮ◕)ﾉ');
         message.member.roles.add(listenerRole);
     }
     else if(message.content == '!challenger'){
