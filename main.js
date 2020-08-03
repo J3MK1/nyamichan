@@ -77,6 +77,8 @@ client.on('message', message =>{
         client.commands.get('question').execute(message, args);
     }else if (command == 'patreon'){
         client.commands.get('patreon').execute(message, args);
+    }else if (command == 'aboutme'){
+        client.commands.get('aboutme').execute(message, args);
     }
 });
 
@@ -87,7 +89,7 @@ client.on('message', message => {
         message.member.roles.add(listenerRole);
     }
     else if(message.content == '!challenger'){
-        message.reply('so do you like to challenge yourself? Okay, here is your challenger stamp! Enjoy! ^^');
+        message.reply('so do you like to challenge yourself? Okay, here is your challenger stamp! Enjoy! (=^v^=)');
         message.member.roles.add(challengerRole);
     }
 
