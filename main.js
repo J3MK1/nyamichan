@@ -10,6 +10,10 @@ const channelId = '738567304065056859' // welcome Id
 
 const discussionId = '716316265823600730' // discussion Id
 
+const getyourroleId = '739729945240272926' // getyourrole Id
+
+const botcommandsId = '739731647577981008'
+
 const listenerRole = '719289193779691530' // listener Id
 
 const challengerRole = '719289140805369898' // challenger Id
@@ -29,7 +33,7 @@ client.on('guildMemberAdd', member =>{
 
     const channel = member.guild.channels.cache.get(channelId)
 
-    channel.send(`Heey, welcome to our server ${member}, say hello to everyone in ${member.guild.channels.cache.get(discussionId).toString()}! I hope you have a lot of fun here! Yayy! :D`)
+    channel.send(`Heey, welcome to our server ${member}! I'm Nyami-chan, the Mei Lin Draws's Assistant! \n\n If you want to be notified of future announcements, go to ${member.guild.channels.cache.get(getyourroleId).toString()} and and if you have any questions, go to ${member.guild.channels.cache.get(botcommandsId).toString()} maybe I can help you! ヽ(o＾▽＾o)ノ`)
 });
 
 client.on('message' , message =>{
