@@ -9,6 +9,10 @@ const fs = require('fs');
 const channelId = '738567304065056859' // welcome Id
 
 const discussionId = '716316265823600730' // discussion Id
+
+const listenerRole = '719289193779691530' // listener Id
+
+const challengerRole = '719289140805369898' // challenger Id
  
 client.commands = new Discord.Collection();
  
@@ -29,43 +33,25 @@ client.on('guildMemberAdd', member =>{
 });
 
 client.on('message' , message =>{
-    if (message.content == 'roll') 
+    if (message.content == '!joke') 
     {
-        var roll =(Math.floor(Math.random()*10));
+        var roll =(Math.floor(Math.random()*5));
         if (roll == 1)
         {
-            message.reply('Wowza!');
+            message.reply('*I once knew a joke but *hmpf* now how did it go?*');
         }
         else if (roll == 2)
         {
-            message.reply('lol1!', roll);
+            message.reply('*My master didnt tell me that I would have to tell jokes ... I am good at messing up!!*');
         }
         else if (roll == 3)
         {
-            message.reply('lol2!');
-        }        else if (roll == 4)
-        {
-            message.reply('lol3!');
-        }        else if (roll == 5)
-        {
-            message.reply('lol4!');
-        }        else if (roll == 6)
-        {
-            message.reply('lol!5');
-        }        else if (roll == 7)
-        {
-            message.reply('lol!6');
-        }        else if (roll == 8)
-        {
-            message.reply('lol!7');
-        }        else if (roll == 9)
-        {
-            message.reply('lol!8');
-        }
+            message.reply('*Once a woman arrived with a very angry face with brown hair and cat ears and... w-what are you doing here Kinatsu?!*');
+        }        
         else
         {
-            message.reply('lol!9');
-        }
+            message.reply('*Kitty, do you have a joke for him? *meoow* Oh. Well, its not the time Kitty!* ~~Lets just keep that to ourselves.~~ :x');
+        }        
     }
 }); 
 
@@ -93,5 +79,18 @@ client.on('message', message =>{
         client.commands.get('patreon').execute(message, args);
     }
 });
+
+client.on('message', message => {
+
+    if(message.content == '!listener'){
+        message.reply('Now you will know everything my master is doing! :D');
+        message.member.addRole(listenerRole);
+    }
+    else if(message.content == '!challenger'){
+        message.reply('So do you like to challenge yourself? Okay, here is your challenger stamp! Enjoy!');
+        message.member.addRole(challengerRole);
+    }
+
+})
 
 client.login(process.env.token)
