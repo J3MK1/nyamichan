@@ -83,11 +83,11 @@ client.on('message', message =>{
 client.on('message', message => {
 
     if(message.content == '!listener'){
-        message.reply('Now you will know everything my master is doing! :D');
+        message.reply('now you will know everything my master is doing! :D');
         message.member.roles.add(listenerRole);
     }
     else if(message.content == '!challenger'){
-        message.reply('So do you like to challenge yourself? Okay, here is your challenger stamp! Enjoy!');
+        message.reply('so do you like to challenge yourself? Okay, here is your challenger stamp! Enjoy! ^^');
         message.member.roles.add(challengerRole);
     }
 
