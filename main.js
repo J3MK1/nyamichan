@@ -46,7 +46,7 @@ client.on('message' , message =>{
         }
         else if (roll == 3)
         {
-            message.reply('once a woman arrived with a very angry face with brown hair and cat ears and... w-what are you doing here Kinatsu?! 	(⊙_⊙)');
+            message.reply('once a woman arrived with a very angry face with brown hair and cat ears and... w-what are you doing here Kinatsu?! (⊙_⊙)');
         }        
         else
         {
