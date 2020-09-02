@@ -39,10 +39,10 @@ client.on('guildMemberAdd', member =>{
 client.on('message' , message =>{
     if (message.content == '!joke') 
     {
-        var roll =(Math.floor(Math.random()*7));
+        var roll =(Math.floor(Math.random()*10));
         if (roll == 1)
         {
-            message.reply('I bought a dalek egg timer recently. After three minutes, it shouts “Eggs Terminate!”');
+            message.reply('I bought a dalek egg timer recently. After three minutes, it shouts “Eggs Terminate!');
         }
         else if (roll == 2)
         {
@@ -50,7 +50,7 @@ client.on('message' , message =>{
         }
         else if (roll == 3)
         {
-            message.reply('Why cant two doctors be together? Because that would be a “Pair-o-docs.”');
+            message.reply('Why cant two doctors be together? Because that would be a “Pair-o-docs.');
         }        
         else if (roll == 4)
         {
@@ -58,15 +58,15 @@ client.on('message' , message =>{
         }
         else if (roll == 5)
         {
-            message.reply('What do you call a kitten in a earthquake? A cat-astrophe”');
+            message.reply('What do you call a kitten in a earthquake? A cat-astrophe');
         } 
         else if (roll == 6)
         {
-            message.reply('Did the cat drop the bass? Youve got to be kitten me”');
+            message.reply('Did the cat drop the bass? Youve got to be kitten me');
         } 
         else (roll == 7)
         {
-            message.reply('What is the hardest cake ever made? It is the Complicake”');
+            message.reply('What is the hardest cake ever made? It is the Complicake');
         } 
     }
 }); 
