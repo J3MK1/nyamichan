@@ -58,15 +58,15 @@ client.on('message' , message =>{
         }
         else if (roll == 5)
         {
-            message.reply('what do you call a kitten in a earthquake? ||A cat-astrophe||');
+            message.reply('what do you call a kitten in a earthquake? ||A cat-astrophe!||');
         } 
         else if (roll == 6)
         {
-            message.reply('did the cat drop the bass? ||Youve got to be kitten me||');
+            message.reply('did the cat drop the bass? ||Youve got to be kitten me!!||');
         } 
         else if (roll == 7)
         {
-            message.reply('what is the hardest cake ever made? ||It is the Complicake||');
+            message.reply('what is the hardest cake ever made? ||It is the Complicake!||');
         } 
     }
 }); 
