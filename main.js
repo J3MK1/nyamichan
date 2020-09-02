@@ -39,23 +39,35 @@ client.on('guildMemberAdd', member =>{
 client.on('message' , message =>{
     if (message.content == '!joke') 
     {
-        var roll =(Math.floor(Math.random()*5));
+        var roll =(Math.floor(Math.random()*10));
         if (roll == 1)
         {
-            message.reply('I once knew a joke but *hmpf~ now how did it go? (˃ᆺ˂)');
+            message.reply('I bought a dalek egg timer recently. After three minutes, it shouts “Eggs Terminate!”');
         }
         else if (roll == 2)
         {
-            message.reply('my master didnt tell me that I would have to tell jokes ... I am good at messing up!! (☆▽☆)');
+            message.reply('What do you call a pile of kittens? A meowntain!');
         }
         else if (roll == 3)
         {
-            message.reply('once a woman arrived with a very angry face with brown hair and cat ears and... w-what are you doing here Kinatsu?! (⊙_⊙)');
+            message.reply('Why cant two doctors be together? Because that would be a “Pair-o-docs.”');
         }        
-        else
+        else if (roll == 4)
         {
-            message.reply('Kitty, do you have a joke for him? *meoow~ Oh. Well, its not the time Kitty! ~~Lets just keep that to ourselves.~~ (￢‿￢ )');
-        }        
+            message.reply('Traveling on a flying carpet is a rugged experience.');
+        }
+        else if (roll == 5)
+        {
+            message.reply('What do you call a kitten in a earthquake? A cat-astrophe”');
+        } 
+        else if (roll == 6)
+        {
+            message.reply('Did the cat drop the bass? Youve got to be kitten me”');
+        } 
+        else if (roll == 7)
+        {
+            message.reply('What is the hardest cake ever made? It is the Complicake”');
+        } 
     }
 }); 
 
