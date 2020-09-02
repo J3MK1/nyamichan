@@ -39,7 +39,7 @@ client.on('guildMemberAdd', member =>{
 client.on('message' , message =>{
     if (message.content == '!joke') 
     {
-        var roll =(Math.floor(Math.random()*10));
+        var roll =(Math.floor(Math.random()*7));
         if (roll == 1)
         {
             message.reply('I bought a dalek egg timer recently. After three minutes, it shouts “Eggs Terminate!”');
@@ -64,7 +64,7 @@ client.on('message' , message =>{
         {
             message.reply('Did the cat drop the bass? Youve got to be kitten me”');
         } 
-        else if (roll == 7)
+        else (roll == 7)
         {
             message.reply('What is the hardest cake ever made? It is the Complicake”');
         } 
