@@ -39,7 +39,7 @@ client.on('guildMemberAdd', member =>{
 client.on('message' , message =>{
     if (message.content == '!joke') 
     {
-        var roll =(Math.floor(Math.random()*10));
+        var roll =(Math.floor(Math.random()*2));
         if (roll == 1)
         {
             message.reply('I bought a dalek egg timer recently. After three minutes, it shouts “Eggs Terminate!');
