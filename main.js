@@ -46,27 +46,27 @@ client.on('message' , message =>{
         }
         else if (roll == 2)
         {
-            message.reply('What do you call a pile of kittens? A meowntain!');
+            message.reply('what do you call a pile of kittens? ||A meowntain!||');
         }
         else if (roll == 3)
         {
-            message.reply('Why cant two doctors be together? Because that would be a “Pair-o-docs.');
+            message.reply('why cant two doctors be together? ||Because that would be a “Pair-o-docs.||');
         }        
         else if (roll == 4)
         {
-            message.reply('Traveling on a flying carpet is a rugged experience.');
+            message.reply('traveling on a flying carpet is a rugged experience.');
         }
         else if (roll == 5)
         {
-            message.reply('What do you call a kitten in a earthquake? A cat-astrophe');
+            message.reply('what do you call a kitten in a earthquake? ||A cat-astrophe||');
         } 
         else if (roll == 6)
         {
-            message.reply('Did the cat drop the bass? Youve got to be kitten me');
+            message.reply('did the cat drop the bass? ||Youve got to be kitten me||');
         } 
-        else (roll == 7)
+        else if (roll == 7)
         {
-            message.reply('What is the hardest cake ever made? It is the Complicake');
+            message.reply('what is the hardest cake ever made? ||It is the Complicake||');
         } 
     }
 }); 
