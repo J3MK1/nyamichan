@@ -27,13 +27,13 @@ for(const file of commandFiles){
     client.commands.set(command.name, command);
 }
  
-client.on('guildMemberAdd', member =>{
+client.on('guildMemberAdd', (member) =>{
 
     console.log(member)
 
     const channel = member.guild.channels.cache.get(channelId)
 
-    channel.send(`Heey, welcome to our server ${member}! I'm Nyami-chan, the Mei Lin Draws's Assistant! \n\n If you want to be notified of future announcements, go to ${member.guild.channels.cache.get(getyourroleId).toString()} and and if you have any questions, go to ${member.guild.channels.cache.get(botcommandsId).toString()} maybe I can help you! ヽ(o＾▽＾o)ノ`)
+    channel.send(`Heey, welcome to our server <@${member.id}>! I'm Nyami-chan, the Mei Lin Draws's Assistant! \n\n If you want to be notified of future announcements, go to ${member.guild.channels.cache.get(getyourroleId).toString()} and and if you have any questions, go to ${member.guild.channels.cache.get(botcommandsId).toString()} maybe I can help you! ヽ(o＾▽＾o)ノ`)
 });
 
 client.on('message' , message =>{
