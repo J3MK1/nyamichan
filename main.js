@@ -21,7 +21,11 @@ const listenerRole = '719289193779691530' // Listener Channel ID
 const challengerRole = '719289140805369898' // Challenger Channel ID
  
 client.commands = new Discord.Collection();
- 
+
+client.once('ready', () => {
+    console.log(client.user.tag +' has logged in');
+});
+
 const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
 for(const file of commandFiles){
     const command = require(`./commands/${file}`);
@@ -80,10 +84,6 @@ client.on('message' , message =>{
             message.reply('what is the hardest cake ever made? ||It is the Complicake!||');
         } 
     }
-}); 
-
-client.once('ready', () => {
-    console.log('Nyami-chan BOT is online!');
 });
  
 client.on('message', message =>{
