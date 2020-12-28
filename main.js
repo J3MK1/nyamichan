@@ -6,17 +6,19 @@ const prefix = '!';
 
 const fs = require('fs');
 
-const channelId = '738567304065056859' // welcome Id
+const welcomeChannelId = '738567304065056859' // Welcome Channel ID
 
-const discussionId = '716316265823600730' // discussion Id
+const exitChannelId = '793221742033371176' // Exit Channel ID
 
-const getyourroleId = '739729945240272926' // getyourrole Id
+const discussionId = '716316265823600730' // Discussion Channel ID
 
-const botcommandsId = '739731647577981008'
+const getyourroleId = '739729945240272926' // Role Channel ID
 
-const listenerRole = '719289193779691530' // listener Id
+const botcommandsId = '739731647577981008' // Bot Commands Channel ID
 
-const challengerRole = '719289140805369898' // challenger Id
+const listenerRole = '719289193779691530' // Listener Channel ID
+
+const challengerRole = '719289140805369898' // Challenger Channel ID
  
 client.commands = new Discord.Collection();
  
@@ -27,14 +29,23 @@ for(const file of commandFiles){
     client.commands.set(command.name, command);
 }
  
-client.on('guildMemberAdd', (member) =>{
-
+client.on('guildMemberAdd', (member) => {
     console.log(member)
 
-    const channel = member.guild.channels.cache.get(channelId)
+    const welcomeMsg = `Heey, welcome to our server <@${member.id}>! I'm Nyami-chan, the Mei Lin Draws's Assistant! \n\n If you want to be notified of future announcements, go to ${member.guild.channels.cache.get(getyourroleId).toString()} and and if you have any questions, go to ${member.guild.channels.cache.get(botcommandsId).toString()} maybe I can help you! ヽ(o＾▽＾o)ノ`
+    
+    const cacheWelcomeId = member.guild.channels.cache.get(welcomeChannelId)
 
-    channel.send(`Heey, welcome to our server <@${member.id}>! I'm Nyami-chan, the Mei Lin Draws's Assistant! \n\n If you want to be notified of future announcements, go to ${member.guild.channels.cache.get(getyourroleId).toString()} and and if you have any questions, go to ${member.guild.channels.cache.get(botcommandsId).toString()} maybe I can help you! ヽ(o＾▽＾o)ノ`)
-});
+    cacheWelcomeId.send(welcomeMsg)
+})
+
+client.on('guildMemberRemove', (member) =>{
+    const byeMsg = `Good bye <@${member.id}>!`
+
+    const cacheExitId = member.guild.channels.cache.get(exitChannelId)
+
+    cacheExitId.send(byeMsg)
+})
 
 client.on('message' , message =>{
     if (message.content == '!joke') 
