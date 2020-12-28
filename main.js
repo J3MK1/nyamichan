@@ -36,7 +36,7 @@ for(const file of commandFiles){
 client.on('guildMemberAdd', (member) => {
     console.log(member)
 
-    const welcomeMsg = `Heey, welcome to our server <@${member.id}>! I'm Nyami-chan, the Mei Lin Draws's Assistant!\n\n If you want to be notified of future announcements, go to ${member.guild.channels.cache.get(botcommandsId).toString()} maybe I can help you! ヽ(o＾▽＾o)ノ`
+    const welcomeMsg = `Heey, welcome to our server <@${member.id}>! I'm Nyami-chan, the Mei Lin Draws's Assistant!\n\n If you want to be notified of future announcements, go to ${member.guild.channels.cache.get(getyourroleId).toString()} and and if you have any questions, go to ${member.guild.channels.cache.get(botcommandsId).toString()} maybe I can help you! ヽ(o＾▽＾o)ノ`
     
     const cacheWelcomeId = member.guild.channels.cache.get(welcomeChannelId)
 
