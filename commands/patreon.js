@@ -1,3 +1,5 @@
+const Discord = require('discord.js');
+
 exports.run = async(client, message, args) => {
     let avatar = message.author.displayAvatarURL({format: 'png'});
     const embed = new Discord.MessageEmbed()
