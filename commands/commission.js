@@ -5,7 +5,7 @@ exports.run = async(client, message, args) => {
     const embed = new Discord.MessageEmbed()
         .setTitle('Commissions')
         .setColor('#FFB6C1')
-        .setDescription('*My master left this message to you:* \n\n "It is closed now and I dont know when I will open to public but if you dont want to wait, I am opening Exclusive Commission Slots every month to my Patrons!\n My Patreon: https://www.patreon.com/meilindraws')
+        .setDescription('*My master left this message to you:* \n\n "It is closed now and I dont know when I will open to public but if you dont want to wait, I am opening Exclusive Commission Slots every month to my Patrons!\n *My Patreon:* https://www.patreon.com/meilindraws"')
         .setImage()
         .setTimestamp()
         .setThumbnail(avatar)
